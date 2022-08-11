@@ -2,10 +2,10 @@
     min-height: 500px;
 }
 
-.h1 {
+.title {
     text-align: center;
     font-weight: 900;
-    color: #3F6BA8;
+    color: #01847F;
 }
 
 .search {
@@ -21,4 +21,34 @@
 
 .button {
     margin-left: 20px;
+}
+
+.result {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 80px;
+}
+
+.waste {
+    text-align: center;
+    font-weight: 900;
+    color: #01847F;
+}
+
+.span {
+    text-align: center;
+    font-weight: 900;
+    color: #FBD26A;
+}
+
+.bottom {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 280px;
+}
+
+.img {
+    width: 120px;
 }
