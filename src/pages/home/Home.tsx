@@ -1,6 +1,6 @@
 import React from 'react'
 import { Input, Button } from 'antd'
-import { AppleFilled, SearchOutlined } from '@ant-design/icons'
+import { FileSearchOutlined, SearchOutlined } from '@ant-design/icons'
 import 'antd/dist/antd.min.css'
 import axios from 'axios'
 
@@ -57,7 +57,7 @@ class Home extends React.Component<HomeProps, HomeState> {
         }
     }
 
-    setInputValue = (e: { target: { value: any } }) => {
+    setInputValue = (e: { target: { value: string } }) => {
         this.setState({ inputValue: e.target.value })
     }
 
@@ -91,7 +91,8 @@ class Home extends React.Component<HomeProps, HomeState> {
                 <div className={ style.search }>
                     <Input
                         className={ style.input }
-                        size="large" placeholder="输入垃圾名称" prefix={ <AppleFilled/> }
+                        size="large" placeholder="输入垃圾名称"
+                        prefix={ <FileSearchOutlined/> }
                         value={ this.state.inputValue }
                         onChange={ this.setInputValue.bind(this) }
                         onKeyPress={ (e) => this.handleEnter(e) }
