@@ -110,7 +110,8 @@ class Home extends React.Component<HomeProps, HomeState> {
                         <span className={ style.span }>&nbsp;是&nbsp;</span>
                         <span
                             className={ style.span }
-                            style={ { color: `${ this.state.color }` } }>
+                            style={ { color: `${ this.state.color }` } }
+                        >
                             { this.state.waste?.category_name }
                         </span>
                     </h1>
