@@ -61,7 +61,7 @@ class Home extends React.Component<HomeProps, HomeState> {
         this.setState({ inputValue: e.target.value })
     }
 
-    // 点击搜索按钮
+    // 点击查询按钮
     handleSearch = () => {
         axios.get('http://127.0.0.1:8000/waste/search/' + this.state.inputValue)
             .then(response => {
@@ -78,7 +78,6 @@ class Home extends React.Component<HomeProps, HomeState> {
 
     // 按下键盘回车
     handleEnter = (e: { charCode: number }) => {
-        console.log(e)
         if (e.charCode === 13) {
             this.handleSearch()
         }
@@ -102,7 +101,7 @@ class Home extends React.Component<HomeProps, HomeState> {
                         size="large" type="primary" icon={ <SearchOutlined/> }
                         onClick={ this.handleSearch.bind(this) }
                     >
-                        搜索
+                        查询
                     </Button>
                 </div>
                 <div className={ style.result } hidden={ this.state.hidden }>
