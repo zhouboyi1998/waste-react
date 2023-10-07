@@ -1,6 +1,6 @@
 import React from 'react'
 import { Input, Button } from 'antd'
-import { AppleFilled, SearchOutlined } from '@ant-design/icons'
+import { RestOutlined, SearchOutlined } from '@ant-design/icons'
 import 'antd/dist/antd.min.css'
 import axios from 'axios'
 
@@ -11,8 +11,8 @@ type Waste = {
     id: number
     waste_name: string
     image: string | undefined
-    category_id: number
-    category_name: string
+    classification_id: number
+    classification_name: string
     description: string
     include: string
     regulation: string
@@ -68,7 +68,7 @@ class Home extends React.Component<HomeProps, HomeState> {
                 this.setState({
                     waste: response.data,
                     hidden: false,
-                    color: colorList[response.data.category_id - 1].colorItem
+                    color: colorList[response.data.classification_id - 1].colorItem
                 })
             })
             .catch(error => {
@@ -91,7 +91,7 @@ class Home extends React.Component<HomeProps, HomeState> {
                 <div className={ style.search }>
                     <Input
                         className={ style.input }
-                        size="large" placeholder="输入垃圾名称" prefix={ <AppleFilled/> }
+                        size="large" placeholder="输入垃圾名称" prefix={ <RestOutlined/> }
                         value={ this.state.inputValue }
                         onChange={ this.setInputValue.bind(this) }
                         onKeyPress={ (e) => this.handleEnter(e) }
@@ -99,8 +99,7 @@ class Home extends React.Component<HomeProps, HomeState> {
                     <Button
                         className={ style.button }
                         size="large" type="primary" icon={ <SearchOutlined/> }
-                        onClick={ this.handleSearch.bind(this) }
-                    >
+                        onClick={ this.handleSearch.bind(this) }>
                         搜索
                     </Button>
                 </div>
@@ -111,7 +110,7 @@ class Home extends React.Component<HomeProps, HomeState> {
                         <span
                             className={ style.span }
                             style={ { color: `${ this.state.color }` } }>
-                            { this.state.waste?.category_name }
+                            { this.state.waste?.classification_name }
                         </span>
                     </h1>
                 </div>

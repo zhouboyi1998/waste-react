@@ -31,7 +31,7 @@ const Index: React.FC = () => (
             </Breadcrumb>
             <div className="site-layout-content"><Home props={ '' }/></div>
         </Content>
-        <Footer style={ { textAlign: 'center' } }>Waste Category ©2022 Created by React and Ant</Footer>
+        <Footer style={ { textAlign: 'center' } }>Waste Classification Search System ©2022 Created by React and Ant Design</Footer>
     </Layout>
 )
 
