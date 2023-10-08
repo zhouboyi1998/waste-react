@@ -1,5 +1,5 @@
 import React from 'react'
-import { Input, Button } from 'antd'
+import { Button, Input } from 'antd'
 import { RestOutlined, SearchOutlined } from '@ant-design/icons'
 import 'antd/dist/antd.min.css'
 import axios from 'axios'
@@ -33,7 +33,7 @@ const colorList: [
 ]
 
 interface HomeProps {
-    props: string
+
 }
 
 interface HomeState {
