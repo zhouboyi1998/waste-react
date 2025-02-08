@@ -1,0 +1,54 @@
+.home {
+    min-height: 500px;
+}
+
+.title {
+    text-align: center;
+    font-weight: 900;
+    color: #01847F;
+}
+
+.search {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 20px;
+}
+
+.input {
+    width: 400px;
+}
+
+.button {
+    margin-left: 20px;
+}
+
+.result {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 80px;
+}
+
+.waste {
+    text-align: center;
+    font-weight: 900;
+    color: #01847F;
+}
+
+.span {
+    text-align: center;
+    font-weight: 900;
+    color: #FBD26A;
+}
+
+.bottom {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 280px;
+}
+
+.img {
+    width: 120px;
+}
